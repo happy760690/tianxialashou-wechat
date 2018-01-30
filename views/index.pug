@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  style.
+      html,body{
+      margin:0;
+      padding:0;
+      width:100%;
+      height:100%;
+      }
+  h1 （真搞笑。）
+  span#busuanzi_container_site_pv 本站总访问量
+    span#busuanzi_value_site_pv
+  script(type='text/javascript' src='//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js')
+  script(type='text/javascript').
+      wx.config({
+        debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+         appId: "#{weChatInfo.appId}", // 必填，公众号的唯一标识
+        timestamp: "#{weChatInfo.timestamp}", // 必填，生成签名的时间戳
+        nonceStr:  "#{weChatInfo.noncestr}", // 必填，生成签名的随机串
+        signature: "#{weChatInfo.signature}",// 必填，签名
+        jsApiList: ["onMenuShareAppMessage",
+        "hideOptionMenu", "showOptionMenu",
+        "hideMenuItems", "showMenuItems",
+        "hideAllNonBaseMenuItem", "showAllNonBaseMenuItem"] // 必填，需要使用的JS接口列表
+        });
+      wx.ready(function(){
+        wx.onMenuShareAppMessage({
+        title: '德基人才', // 分享标题
+        desc: '快来看看有没有适合你的职位吧', // 分享描述
+        link: "http://mamingjuan.cn/user", // 分享链接
+        imgUrl: 'http://mamingjuan.cn/statics/images/potential/man_03.png', // 分享图标
+        success: function () {
+            alert('分享成功');
+        },
+        cancel: function () {
+        alert('分享失败');
+        }
+        });
+        });
+

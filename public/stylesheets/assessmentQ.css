@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/*基本信息*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0; }
+
+body, button, input, select, textarea { font: 12px/1.5tahoma, arial, \5b8b\4f53; }
+
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+
+address, cite, dfn, em, var { font-style: normal; }
+
+code, kbd, pre, samp { font-family: couriernew, courier, monospace; }
+
+small { font-size: 12px; }
+
+ul, ol { list-style: none; }
+
+a { text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+sup { vertical-align: text-top; }
+
+sub { vertical-align: text-bottom; }
+
+legend { color: #000; }
+
+fieldset, img { border: 0; }
+
+button, input, select, textarea { font-size: 100%; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+.swiper-cont { overflow: scroll; font-size: .3rem; padding: .5rem .3rem 1rem; color: #313131; }
+
+.swiper-cont .single-img { width: 5.9rem; height: 3.3rem; margin: -.1rem auto 0; display: block; padding-bottom: .45rem; }
+
+.swiper-cont.distinct .multi-select { display: none; }
+
+.swiper-cont p { padding-bottom: .3rem; line-height: .5rem; }
+
+.swiper-cont p abbr { color: #fe6262; }
+
+.swiper-cont ul li { line-height: .9rem; }
+
+.swiper-cont ul li abbr { display: inline-block; border-radius: 50%; width: .65rem; height: .65rem; line-height: .65rem; border: 1px solid #13b5ff; text-align: center; color: #13b5ff; }
+
+.swiper-cont ul li.selected abbr { background-color: #51d570; color: #fff; border: 1px solid #51d570; }
+
+.swiper-cont ul li label { padding-left: .25rem; }
+
+.swiper-cont .next { background-color: #ff5657; border-radius: 50px; color: #fff; width: 2.56rem; height: .6rem; line-height: .6rem; text-align: center; margin: 0 auto; position: absolute; left: 0; right: 0; bottom: .36rem; }
+
+.swiper-cont .next.grey { background-color: #d2d2d2; }
+
+.swiper-cont.some-images ul { font-size: 0; padding-top: .2rem; }
+
+.swiper-cont.some-images ul li { line-height: .9rem; position: relative; width: 2.76rem; height: 2.76rem; display: inline-block; padding-bottom: .3rem; }
+
+.swiper-cont.some-images ul li abbr { z-index: 1; position: absolute; background-color: #fff; font-size: .3rem; left: auto; right: .1rem; }
+
+.swiper-cont.some-images ul li img { width: 2.75rem; height: 2.75rem; position: absolute; top: 0; }
+
+.swiper-cont.some-images ul li:nth-child(2n) { margin-left: .26rem; }
+
+.swiper-cont.some-images ul li.selected abbr { background-color: #51d570; }

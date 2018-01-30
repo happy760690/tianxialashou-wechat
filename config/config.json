@@ -1,0 +1,14 @@
+{
+  "wechat" : {
+    "grant_type": "client_credential",
+    "appID": "wx2aa2d8a7c1c10d3e",
+    "appSecret": "5a881a97747e85c0146bf2b4838d249f",
+    "token": "mamingjuan",
+    "prefix": "https://api.weixin.qq.com/cgi-bin/",
+    "mpPrefix": "https://mp.weixin.qq.com/cgi-bin/",
+    "accessTokenUrl":"https://api.weixin.qq.com/cgi-bin/token",
+    "ticketUrl":"https://api.weixin.qq.com/cgi-bin/ticket/getticket",
+    "cache_duration":7200000,
+    "baseUrl":"http://wechat.haokaiyang.com"
+  }
+}

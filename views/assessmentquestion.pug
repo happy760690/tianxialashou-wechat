@@ -1,0 +1,262 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title #{title}
+    meta(name='viewport', content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1')
+    link(rel='stylesheet', href='/statics/stylesheets/swiper.min.css')
+    style.
+      html, body {
+      position: relative;
+      height: 100%;
+      }
+      body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+      }
+      .swiper-container {
+      width: 100%;
+      height: 100%;
+      }
+      .swiper-slide {
+      /*text-align: center;*/
+      font-size: 18px;
+      background: #fff;
+      overflow: auto;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      /*            -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;*/
+      /* -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;*/
+      }
+    script.
+      (function (doc, win) { // 分辨率Resolution适配
+      var docEl = doc.documentElement,
+      resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+      recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      if (clientWidth >= 640) {
+      clientWidth = 640;
+      }
+      docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+      }; // Abort if browser does not support addEventListener
+      recalc();
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+      })(document, window);
+  body
+    // Swiper
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          .swiper-cont.some-images
+            p 1.下坡滑雪场上凹陷了一个洞，洞里面有人正在冬眠，这时一个浑然不知的滑雪者正要经过这里，请问这个人的下场会如何?
+            ul
+              li
+                abbr A
+                img.single-img(src='http://himg2.huanqiu.com/attachment2010/2017/0302/20170302022027928.jpg', alt='')
+              li
+                abbr B
+                img.single-img(src='http://himg2.huanqiu.com/attachment2010/2017/0302/20170302022027928.jpg', alt='')
+              li
+                abbr C
+                img.single-img(src='http://himg2.huanqiu.com/attachment2010/2017/0302/20170302022027928.jpg', alt='')
+              li
+                abbr D
+                img.single-img(src='http://himg2.huanqiu.com/attachment2010/2017/0302/20170302022027928.jpg', alt='')
+        .swiper-slide
+          .swiper-cont
+            p 2.下坡滑雪场上凹陷了一个洞，洞里面有人正在冬眠，这时一个浑然不知的滑雪者正要经过这里，请问这个人的下场会如何?
+            img.single-img(src='http://himg2.huanqiu.com/attachment2010/2017/0302/20170302022027928.jpg', alt='')
+            ul
+              li
+                abbr A
+                label 掉到洞里遭遇熊攻击
+              li
+                abbr B
+                label 轻松地跳过洞穴
+              li
+                abbr C
+                label 有人告诉他有危险而转变方向
+              li
+                abbr D
+                label 在到达洞穴之前突然滑倒
+              li
+                abbr E
+                label 掉到洞里遭遇熊攻击
+              li
+                abbr F
+                label 轻松地跳过洞穴
+              li
+                abbr G
+                label 有人告诉他有危险而转变方向
+              li
+                abbr H
+                label 在到达洞穴之前突然滑倒
+        .swiper-slide
+          .swiper-cont.mul-select
+            p
+              | 3.下坡滑雪场上凹陷了一个洞，洞里面有人正在冬眠，这时一个浑然不知的滑雪者正要经过这里，请问这个人的下场会如何?
+              abbr.multi-select (多选)
+            ul
+              li
+                abbr A
+                label 掉到洞里遭遇熊攻击
+              li
+                abbr B
+                label 轻松地跳过洞穴
+              li
+                abbr C
+                label 有人告诉他有危险而转变方向
+              li
+                abbr D
+                label 在到达洞穴之前突然滑倒
+              li
+                abbr E
+                label 掉到洞里遭遇熊攻击
+              li
+                abbr F
+                label 轻松地跳过洞穴
+              li
+                abbr G
+                label 有人告诉他有危险而转变方向
+              li
+                abbr H
+                label 在到达洞穴之前突然滑倒
+              li
+                abbr I
+                label 掉到洞里遭遇熊攻击
+              li
+                abbr J
+                label 轻松地跳过洞穴
+              li
+                abbr K
+                label 有人告诉他有危险而转变方向
+              li
+                abbr L
+                label 在到达洞穴之前突然滑倒
+              li
+                abbr M
+                label 掉到洞里遭遇熊攻击
+            .next.grey 下一题
+        .swiper-slide
+          .swiper-cont.distinct
+            p 4.下坡滑雪场上凹陷了一个洞，洞里面有人正在冬眠，这时一个浑然不知的滑雪者正要经过这里，请问这个人的下场会如何?
+            ul
+              li
+                abbr A
+                label 掉到洞里遭遇熊攻击
+              li
+                abbr B
+                label 轻松地跳过洞穴
+              li
+                abbr C
+                label 有人告诉他有危险而转变方向
+              li
+                abbr D
+                label 在到达洞穴之前突然滑倒
+              li
+                abbr E
+                label 掉到洞里遭遇熊攻击
+              li
+                abbr F
+                label 轻松地跳过洞穴
+              li
+                abbr G
+                label 有人告诉他有危险而转变方向
+              li
+                abbr H
+                label 在到达洞穴之前突然滑倒
+        .swiper-slide
+          .swiper-cont.distinct
+            p 4.下坡滑雪场上凹陷了一个洞，洞里面有人正在冬眠，这时一个浑然不知的滑雪者正要经过这里，请问这个人的下场会如何?
+            ul
+              li
+                abbr A
+                label 掉到洞里遭遇熊攻击
+              li
+                abbr B
+                label 轻松地跳过洞穴
+              li
+                abbr C
+                label 有人告诉他有危险而转变方向
+              li
+                abbr D
+                label 在到达洞穴之前突然滑倒
+              li
+                abbr E
+                label 掉到洞里遭遇熊攻击
+              li
+                abbr F
+                label 轻松地跳过洞穴
+              li
+                abbr G
+                label 有人告诉他有危险而转变方向
+              li
+                abbr H
+                label 在到达洞穴之前突然滑倒
+            .next.grey 确认提交
+      // Add Pagination
+      // <div class="swiper-pagination"></div>
+    link(href='/statics/stylesheets/assessmentQ.css', type='text/css', rel='stylesheet')
+    script(src='/statics/js/swiper.min.js')
+    script(src='/statics/js/jquery.js', type='text/javascript')
+    script.
+      var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      paginationClickable: true,
+      direction : 'vertical',
+      draggable : false,
+      onlyExternal : true,
+      speed:1100
+      });
+      $('.next').click(function(){
+      var ll = $(this).prev().find('li.selected').length;
+      if(ll > 0 ){
+      var status = swiper.slideNext();
+      if(!status){//当前为最后一张
+      alert("结束了");
+      }
+      }
+      })
+      $('.swiper-cont li').click(function () {
+      var $current = $(this);
+      //判断单选复选
+      if(!$current.parents(".swiper-cont").hasClass("mul-select")){
+      //选中
+      $current.siblings().removeClass("selected");
+      $current.addClass("selected");
+      var status = swiper.slideNext();//单选跳下一步
+      if(!status){
+      $current.parents(".swiper-cont").find(".next").removeClass("grey");
+      }
+      }else {//多选
+      if($current.hasClass("selected")){
+      $current.removeClass("selected");
+      }else {
+      $current.addClass("selected");
+      }
+      var selectedLen = $current.parent().find("li.selected").length;
+      if(selectedLen > 0){
+      $current.parents(".swiper-cont").find(".next").removeClass("grey");
+      }else{
+      $current.parents(".swiper-cont").find(".next").addClass("grey");
+      }
+      }
+      });
+
+
